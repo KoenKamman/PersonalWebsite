@@ -1,29 +1,26 @@
 @import 'mixins';
 @import 'variables';
 
-.body {
+.container {
     display: flex;
-    flex: 1;
     flex-direction: column;
-    @include tablet {
-        flex-direction: row;
-    }
+    height: 100%;
+}
+
+.body {
+    background-color: $color-primary-light;
+    display: flex;
+    padding: 10px;
+    flex: 1 0 auto;
+    flex-direction: column;
 }
 
 .left {
     order: -1;
 }
 
-@include tablet {
+@include tablet-landscape-up {
     .body {
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-    }
-    .content {
-        flex: 70;
-    }
-    .left, .right {
-        flex: 15;
+        flex-direction: row; 
     }
 }

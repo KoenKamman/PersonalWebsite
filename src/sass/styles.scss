@@ -1,12 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
-html, body, app-root {
+html, body {
+    font-family: $font-stack;
     height: 100%;
-}
-
-body, app-root {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
 }
