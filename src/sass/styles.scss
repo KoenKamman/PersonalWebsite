@@ -1,7 +1,17 @@
 @import 'variables';
 @import 'mixins';
+@import '../../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css';
 
-html, body {
-    font-family: $font-stack;
+html,
+body {
     height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.fill {
+    flex: 1 1 auto;
 }
