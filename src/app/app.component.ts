@@ -18,5 +18,9 @@ export class AppComponent {
       "github",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/github.svg")
     );
+    this.matIconRegistry.addSvgIcon(
+      "gitlab",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/gitlab.svg")
+    );
   }
 }
