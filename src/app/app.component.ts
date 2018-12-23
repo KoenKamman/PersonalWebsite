@@ -22,5 +22,9 @@ export class AppComponent {
       "gitlab",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/gitlab.svg")
     );
+    this.matIconRegistry.addSvgIcon(
+      "k_logo",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/k_logo.svg")
+    );
   }
 }

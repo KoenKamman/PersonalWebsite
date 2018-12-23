@@ -28,7 +28,8 @@
             ],
             "styles": [
               "node_modules/normalize.css/normalize.css",
-              "src/sass/styles.scss"
+              "src/sass/styles.scss",
+              "src/sass/theme.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
