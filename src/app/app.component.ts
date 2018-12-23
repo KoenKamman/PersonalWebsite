@@ -29,6 +29,10 @@ export class AppComponent {
       "k_logo",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/k_logo.svg")
     );
+    this.matIconRegistry.addSvgIcon(
+      "linkedin",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/linkedin.svg")
+    );
   }
 
   public prepareRoute(outlet: RouterOutlet) {
