@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PixelsortComponent } from './components/pixelsort/pixelsort.component';
+import { MainComponent } from './components/main/main.component';
 
 const routes: Routes = [
-  { path: '',  component: PixelsortComponent },
+  { path: '',  component: MainComponent },
   { path: '**',  redirectTo: '' }
 ];
 
@@ -12,4 +12,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PixelsortRoutingModule { }
+export class PortfolioRoutingModule { }

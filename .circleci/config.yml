@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.12-browsers
+    steps:
+      - checkout
+      - run:
+          name: Update NPM
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: NPM install
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Unit Tests
+          command: npm run test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
+      - run:
+          name: End-to-end Tests
+          command: npm run e2e -- --protractor-config=./e2e/protractor-ci.conf.js
+      - run:
+          name: Build
+          command: |
+              if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                  npm run build -- --prod --progress=false
+              else
+                  npm run build --progress=false
+              fi

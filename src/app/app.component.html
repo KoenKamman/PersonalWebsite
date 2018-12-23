@@ -1,13 +1,3 @@
-<div class="container">
-    <app-header></app-header>
-    <div class="body">
-        <div class="content">
-            <a routerLink="">Home</a>
-            <a routerLink="/pixelsort">Pixelsort</a>
-            <router-outlet></router-outlet>
-        </div>
-        <div class="left"></div>
-        <div class="right"></div>
-    </div>
-    <app-footer></app-footer>
+<div [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
+    <router-outlet #outlet="outlet"></router-outlet>
 </div>
