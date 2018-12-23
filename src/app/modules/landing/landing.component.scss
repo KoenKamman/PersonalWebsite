@@ -1,0 +1,14 @@
+mat-grid-list {
+    height: 100%;
+}
+
+mat-grid-tile {
+    outline: none;
+    background-color: #000;
+    opacity: 0.5;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.5;
+    }
+}
