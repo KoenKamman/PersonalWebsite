@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PixelsortComponent } from './components/pixelsort/pixelsort.component';
 
 const routes: Routes = [
-  { path: '',  component: PixelsortComponent }
+  { path: '',  component: PixelsortComponent },
+  { path: '**',  redirectTo: '' }
 ];
 
 @NgModule({

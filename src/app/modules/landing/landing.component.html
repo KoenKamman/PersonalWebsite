@@ -1,6 +1,22 @@
-<mat-grid-list cols="2" rowHeight="fit" gutterSize="0">
-    <mat-grid-tile routerLink="/portfolio" matRipple>Portfolio</mat-grid-tile>
-    <mat-grid-tile routerLink="/pixelsort" matRipple>Pixelsort</mat-grid-tile>
-    <mat-grid-tile matRipple></mat-grid-tile>
-    <mat-grid-tile matRipple></mat-grid-tile>
+<mat-grid-list [cols]="columns" [rowHeight]="rowHeight">
+    <mat-grid-tile routerLink="/portfolio" matRipple matRippleCentered="true">
+        <mat-icon svgIcon="k_logo" color="accent"></mat-icon>
+        <p>Portfolio</p>
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
+    <mat-grid-tile matRipple matRippleCentered="true">
+    </mat-grid-tile>
 </mat-grid-list>
